@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.integrate as od
+import cv2
 from matplotlib import rc
-#from mpl_toolkits import mplot3d
 from scipy import interpolate
 from scipy.interpolate import RectBivariateSpline as RBS
 from scipy.sparse import lil_matrix
@@ -154,8 +154,8 @@ def conc_init(n_x, n_y):
     X, Y = np.meshgrid(x, y)
     Z = np.exp(-((X)**2 + (Y)**2)/0.1)
    
-    #path = r'C:\Users\Alex\Desktop\READ.png'
-    #im = cv2.imread(path, 0)
+    #path = r'C:\Users\Alex\Desktop\READ.png' #Edit path to match your directory
+    #Z = cv2.imread(path, 0)
    
     Z = Z.reshape(n)
     return(Z)
